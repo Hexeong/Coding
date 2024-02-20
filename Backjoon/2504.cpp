@@ -5,31 +5,22 @@
 
 using namespace std;
 
-stack<pair<char, int>> st;
-vector<vector<pair<int, int>>> floors[16]; // i = start_floor, j = list, first = value, second = end_floor
+stack<char> st;
 
 int main() {
 	string t; cin >> t;
 
-	int floor{ 0 }, last_floor{ 0 };
+	int res = 0, temp = 1;
 	for (int k = 0; k < t.size(); k++) {
 		if (t[k] == '(') {
-
-			floor++; last_floor = floor;
-			st.push(make_pair('(', floor));
-
+			temp *= 2;
+			st.push('(');
 		}
-		else if (t[k] == ')') {
-			if (st.size() != 0 && st.top().first == '(') {
-				if (st.top().second == last_floor) {
-				}
-				else if (st.top().second + 1 == last_floor) {
-					
-					last_floor -= 1;
-				}
-				floor--;
+		else if (t[k] == ')' && k != 0) {
+			if (!st.empty() && st.top() == '(') {
+				if (t[k - 1] == '(') res += temp;
+				temp /= 2;
 				st.pop();
-
 			}
 			else {
 				cout << 0;
@@ -37,12 +28,28 @@ int main() {
 			}
 		}
 		else if (t[k] == '[') {
-
+			temp *= 3;
+			st.push('[');
 		}
-		else if (t[k] == ']') {
-
+		else if (t[k] == ']' && k != 0) {
+			if (!st.empty() && st.top() == '[') {
+				if (t[k - 1] == '[') res += temp;
+				temp /= 3;
+				st.pop();
+			}
+			else {
+				cout << 0;
+				return 0;
+			}
+		}
+		else {
+			cout << 0;
+			return 0;
 		}
 	}
+
+	if (!st.empty()) cout << 0;
+	else cout << res;
 
 	return 0;
 }
