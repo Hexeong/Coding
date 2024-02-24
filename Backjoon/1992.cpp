@@ -131,9 +131,23 @@ int main() {
 		}
 	}
 
-	revert(0, 0, N);
-
-	cout << '(' << res << ')';
+	bool judge = true;;
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			if (input[0][0] != input[i][j]) {
+				judge = false;
+				break;
+			}
+		}
+		if (!judge) break;
+	}
+	if (judge) {
+		cout << input[0][0];
+	}
+	else {
+		revert(0, 0, N);
+		cout << '(' << res << ')';
+	}
 	
 
 	return 0;
