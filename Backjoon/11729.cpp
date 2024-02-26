@@ -8,16 +8,7 @@ int N;
 stack<int> s1;
 stack<int> s2;
 stack<int> s3;
-vector<int> res;
-
-void re_odd(int n) {
-	if (n == 1) {
-
-	}
-	else {
-
-	}
-}
+vector<pair<int, int>> res;
 
 void move(int start, int end) {
 	if (start == 1) {
@@ -53,27 +44,26 @@ void move(int start, int end) {
 	return;
 }
 
-void re_even(int n, int start, int end) {
+void re(int n, int start, int end) {
 	if (n == 1) {
 		move(start, end);
+		res.push_back(make_pair(start, end));
 		return;
 	}
 	else {
-		if (s1.empty()) {
-			re_even(n - 1, 2, 1);
+		bool x[] = { true, true, true };
+		x[start - 1] = false;
+		x[end - 1] = false;
+		for (int i = 0; i < 3; i++) {
+			if (x[i]) {
+				re(n - 1, start, i + 1);
 
-			s3.push(s2.top());
-			s2.pop();
+				move(start, end);
+				res.push_back(make_pair(start, end));
 
-			re_even(n - 1, 1, 3);
-		}
-		else {
-			re_even(n - 1, 1, 2);
-
-			s3.push(s1.top());
-			s1.pop();
-
-			re_even(n - 1, 2, 3);
+				re(n - 1, i + 1, end);
+				return;
+			}
 		}
 
 		return;
@@ -89,8 +79,12 @@ int main() {
 	cin >> N;
 	for (int i = N; i > 0; i--) s1.push(i);
 
-	if (N % 2 == 0) re_even(N, 1, 3);
-	else re_odd(N);
+	re(N, 1, 3);
 	
+	cout << res.size() << "\n";
+	for (int i = 0; i < res.size(); i++) {
+		cout << res[i].first << " " << res[i].second << "\n";
+	}
+
 	return 0;
 }
