@@ -16,16 +16,14 @@ void tracking(int n) {
 	}
 	else {
 		int temp;
-		for (int i = 0; i < N; i++) {
+		for (int i = 0; i < arr.size(); i++) {
 			temp = arr[i];
 
-			n++;
 			res.push_back(temp);
 			arr.erase(arr.begin() + i);
-			tracking(n);
+			tracking(n + 1);
 			arr.insert(arr.begin() + i, temp);
 			res.pop_back();
-			n--;
 		}
 		return;
 	}
