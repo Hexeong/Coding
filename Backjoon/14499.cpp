@@ -8,61 +8,61 @@ int order[1000];
 int map[20][20];
 int bottom = 6;
 
-int dice[6] = { 1, 2, 3, 4, 5, 6 };
-// 1, 3, 4, 6 - µ¿ ¼­
-// 1, 2, 5, 6 - ºÏ ³²
+int dice[6] = { 0, 0, 0, 0, 0, 0 };
+// 1, 3, 6, 4 - µ¿ ¼­
+// 1, 2, 6, 5 - ºÏ ³²
 
 bool check(int o) {
 	if (o == 1) {
-		if (x == N - 1) return true;
+		if (y == M - 1) return true;
 		else return false;
 	}
 	else if (o == 2) {
-		if (x == 0) return true;
-		else return false;
-	}
-	else if (o == 3) {
 		if (y == 0) return true;
 		else return false;
 	}
+	else if (o == 3) {
+		if (x == 0) return true;
+		else return false;
+	}
 	else {
-		if (y == M - 1) return true;
+		if (x == N - 1) return true;
 		else return false;
 	}
 }
 
 void roll(int o) {
 	if (o == 1) {
-		x++;
+		y++;
 		int temp = dice[0];
 		dice[0] = dice[2];
-		dice[2] = dice[3];
-		dice[3] = dice[5];
-		dice[5] = temp;
+		dice[2] = dice[5];
+		dice[5] = dice[3];
+		dice[3] = temp;
 	}
 	else if (o == 2) {
-		x--;
+		y--;
 		int temp = dice[0];
-		dice[0] = dice[5];
-		dice[5] = dice[3];
-		dice[3] = dice[2];
+		dice[0] = dice[3];
+		dice[3] = dice[5];
+		dice[5] = dice[2];
 		dice[2] = temp;
 	}
 	else if (o == 3) {
-		y--;
-		int temp = dice[0];
-		dice[0] = dice[5];
-		dice[5] = dice[4];
-		dice[4] = dice[1];
-		dice[1] = temp;
-	}
-	else {
-		y++;
+		x--;
 		int temp = dice[0];
 		dice[0] = dice[1];
-		dice[1] = dice[4];
+		dice[1] = dice[5];
+		dice[5] = dice[4];
+		dice[4] = temp;
+	}
+	else {
+		x++;
+		int temp = dice[0];
+		dice[0] = dice[4];
 		dice[4] = dice[5];
-		dice[5] = temp;
+		dice[5] = dice[1];
+		dice[1] = temp;
 	}
 }
 
