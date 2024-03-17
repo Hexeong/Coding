@@ -1,14 +1,87 @@
 ﻿// Backjoon.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 
-//#include <iostream>
-//
-//using namespace std;
-//
-//int main()
-//{
-//    cout << "good";
-//}
+#include<iostream>
+#include<queue>
+#include<algorithm>
+
+using namespace std;
+
+int N, way, c; // 2 >=, 200,000 <=
+int seq[200001]; // 순번, 시간, 차선
+int tms[200001];
+int lns[200001];
+queue<int> q[4];
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        int a; char temp; int b; cin >> a >> temp;
+        if (temp == 'A') b = 0;
+        else if (temp == 'B') b = 1;
+        else if (temp == 'C') b = 2;
+        else if (temp == 'D') b = 3;
+        seq[i] = -1; // 10 0, 10 1
+        tms[i] = a;
+        lns[i] = b;
+    }
+
+    for (int t = 0; t < 1000000001; t++) {
+        // 차선에 추가, 같은 시간대에 들어올 차량이 있으면 추가, 시간 단축 용도
+        while (t == tms[c]) {
+            q[lns[c]].push(c);
+            c++;
+        }
+
+        if (!(q[0].empty() && q[1].empty() && q[2].empty() && q[3].empty())) { // 차선에 차가 있을 때
+            // 4차선 중 차가 나갈 수 있는 경우 : 
+                // 차가 2대 나갈 수 있는 경우
+                // 차가 1대만 나가는 경우
+            int tmp1, tmp2;
+            bool ch = true;
+            for (int i = 0; i < 4; i++) { // 1 3번 탐색, 2 4 탐색
+                tmp1 = (way - 1 + i < 0 ? 3 : (way - 1 + i) % 4);
+                tmp2 = (way + i) % 4;
+
+                if (!q[tmp2].empty() && q[tmp1].empty()) { // 오른 쪽 차선이 빈 차선을 찾은 경우
+                    seq[q[tmp2].front()] = t;
+                    q[tmp2].pop();
+                    ch = false;
+
+                    if (i < 2 && !q[(tmp2 + 2) % 4].empty() && q[(tmp1 + 2) % 4].empty()) { // 다른 차선이 함께 통과 가능한 경우
+                        seq[q[(tmp2 + 2) % 4].front()] = t;
+                        q[(tmp2 + 2) % 4].pop();
+                        way = (way + i + 3) % 4;
+                    }
+                    else way = (way + i + 1) % 4;
+
+                    break;
+                }
+            }
+            // 차가 나갈 수 없는 경우 : 나머지 break걸고 그대로 출력
+            if (ch) break;
+        }
+        else if (c == N) { // 차선에 차가 없고, 들어올 차도 없을 때
+            break;
+        }
+        else { // 차선에 차가 없고, 들어올 차는 있을 때 : 다음 차로 이동 
+            t = tms[c] - 1;
+        }
+    }
+
+    // 출력
+    for (int i = 0; i < N; i++) cout << seq[i] << "\n";
+
+
+
+    return 0;
+}
+
+// int input[1000000001][4]; // 초를 index 삼기, 문제 -> 4byte형 int, 1024MB = int * 256,000,000개까지
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴

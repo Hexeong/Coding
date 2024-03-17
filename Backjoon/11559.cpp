@@ -6,9 +6,10 @@
 using namespace std;
 
 int res;
+
 char field[12][6];
 bool check[12][6];
-pair<int, int> temp;
+
 queue<pair<int, int>> q;
 vector<pair<int, int>> st;
 
@@ -62,24 +63,13 @@ void BFS(pair<int, int> p) {
 
 	// 처리 구문
 	if (st.size() >= 4) {
-		// 위치 없애기 및 재배치
+		// 위치 없애기
 		for (int i = 0; i < st.size(); i++) {
 			field[st[i].first][st[i].second] = '.';
 			check[st[i].first][st[i].second] = false;
 		}
-		
-		for (int i = 11; i > 0; i--) {
-			// if 로 시간 절약 한다고 해도 * 2 의 연산이 진행 따라서 그대로 하는 게 좋을 듯
-			field[i][0] = field[i - 1][0];
-			field[i][1] = field[i - 1][1];
-			field[i][2] = field[i - 1][2];
-			field[i][3] = field[i - 1][3];
-		}
 
-		field[0][0] = '.';
-		field[0][1] = '.';
-		field[0][2] = '.';
-		field[0][3] = '.';
+
 
 		// 연쇄 횟수 ++
 		res++;
@@ -94,7 +84,7 @@ pair<int, int> find_start() {
 	return make_pair(-1, -1);
 }
 
-int main() {
+int mains() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
@@ -104,6 +94,7 @@ int main() {
 		for (int j = 0; j < 6; j++) field[i][j] = s[j];
 	}
 
+	pair<int, int> temp;
 	// 시작점 찾기 11, 0
 	temp = find_start();
 	// while 더 안터질 때까지
