@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99FB24F1-0FF7-4551-ADA0-A003B91D811C}|Softeer\\Softeer.vcxproj|C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\Softeer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99FB24F1-0FF7-4551-ADA0-A003B91D811C}|Softeer\\Softeer.vcxproj|solutionrelative:Softeer\\Softeer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99FB24F1-0FF7-4551-ADA0-A003B91D811C}|Softeer\\Softeer.vcxproj|C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99FB24F1-0FF7-4551-ADA0-A003B91D811C}|Softeer\\Softeer.vcxproj|solutionrelative:Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp",
+              "DocumentMoniker": "C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp",
+              "RelativeDocumentMoniker": "Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp",
+              "ToolTip": "C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp",
+              "RelativeToolTip": "Softeer\\\uC790\uB3D9\uCC28_\uD14C\uC2A4\uD2B8.cpp",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAywF8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-26T01:54:12.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Softeer.cpp",
+              "DocumentMoniker": "C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\Softeer.cpp",
+              "RelativeDocumentMoniker": "Softeer\\Softeer.cpp",
+              "ToolTip": "C:\\Users\\123ma\\Desktop\\Coding\\Softeer\\Softeer\\Softeer.cpp",
+              "RelativeToolTip": "Softeer\\Softeer.cpp",
+              "ViewState": "AQIAAKIAAAAAAAAAAIAywK0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-26T01:52:58.925Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
