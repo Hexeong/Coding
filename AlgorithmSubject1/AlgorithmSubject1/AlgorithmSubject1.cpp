@@ -9,15 +9,16 @@ struct page {
     string url;
     bool visited = false;
 };
-
 struct link {
     string end;
     int end_idx;
 };
 
 int N;
+string leader;
 vector<link> graph[1000];
 vector<link> graph_t[1000];
+
 page pages[1000];
 stack<int> finished;
 string result[1000];
@@ -34,6 +35,7 @@ int main()
     cout.tie(NULL);
 
     input();
+
     // phase1 및 중간 정보 출력
     for (int i = 0; i < N; i++)
         if (!pages[i].visited) phase1(i);
@@ -41,17 +43,16 @@ int main()
 
 
     // 다음 DFS를 위한 visited 초기화
-    for (int i = 0; i < N; i++) pages[i].visited = false;
+    for (int i = 0; i < N; i++) 
+        pages[i].visited = false;
 
 
     // phase2
-    string leader;
     while (!finished.empty()) {
         if (!pages[finished.top()].visited) {
             leader = pages[finished.top()].url;
             phase2(finished.top());
         }
-        result[finished.top()] = leader;
         finished.pop();
     }
     for (int i = 0; i < N; i++) cout << result[i] << " ";
@@ -78,9 +79,12 @@ void input() {
 
     for (int i = 0; i < N; i++) { // i가 start_idx
         string start, end;
-        int end_idx, links;
+        int start_idx, end_idx, links;
         cin >> start >> links;
-        if (links == 0) continue;
+
+        for (int j = 0; j < N; j++) if (pages[j].url == start) {
+            start_idx = j;
+        }
 
         for (int j = 0; j < links; j++) {
             cin >> end;
@@ -90,8 +94,9 @@ void input() {
             }
 
             link l; l.end = end; l.end_idx = end_idx;
-            graph[i].push_back(l);
-            link l_t; l_t.end = start; l_t.end_idx = i;
+            graph[start_idx].push_back(l);
+
+            link l_t; l_t.end = start; l_t.end_idx = start_idx;
             graph_t[end_idx].push_back(l_t);
         }
     }
@@ -118,6 +123,7 @@ void phase1(int start) {
 
 void phase2(int start) {
     pages[start].visited = true;
+    result[start] = leader;
     for (int i = 0; i < graph_t[start].size(); i++) {
         if (pages[graph_t[start].at(i).end_idx].visited) continue;
         phase2(graph_t[start].at(i).end_idx);
