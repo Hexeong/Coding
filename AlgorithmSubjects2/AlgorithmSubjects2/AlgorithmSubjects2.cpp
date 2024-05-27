@@ -13,7 +13,6 @@ struct running_info {
 struct station {
 	string name;
 	int number;
-	char status = 'U';
 };
 
 int n, q;
@@ -21,7 +20,11 @@ int n, q;
 vector<running_info> subway_stops[200000]; // station 별로 가진 노선 정보
 station cur_end_course[1000]; // 현재 노선마다 end station을 저장해둠
 // 나중에 노선에 추가시 여기 값을 기준으로 새로운 edge를 추가한다음 cur_end_course update
+
 station stops[200000];
+int tot_time[200000];
+
+// heap으로 fringe를 관리해봅시다. 한번
 
 bool compare_station(running_info a, running_info b) {
 	return a.stops_number < b.stops_number;
@@ -53,6 +56,12 @@ int main() {
 
 	for (int i = 0; i < q; i++) {
 		char aORb, source, destination; cin >> aORb >> source >> destination;
+
+		for (int j = 0; j < n; j++) { // 모든 질의에 대한 초기화 과정
+			// heap의 unseen 필요
+			tot_time[j] = INFINITY;
+		}
+
 		if (aORb == 'A') {
 
 		}
