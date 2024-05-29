@@ -8,7 +8,12 @@ using namespace std;
 struct running_info {
 	string stops_name;
 	int stops_number;
-	int course_number;
+	int course;
+	int time;
+};
+struct next_station {
+	string stops_name;
+	int stops_number;
 	int time;
 };
 struct end_station {
@@ -17,26 +22,28 @@ struct end_station {
 };
 struct station {
 	string name;
-	char status = 'U';
+	char status;
 	int prev_stat_idx;
 };
 
-int n, q, heap_size;
+int n, q, max_course, max_station, heap_size;
 
-vector<running_info> station_course[200000]; // station 별로 가진 노선 정보
-end_station cur_end_course[1000]; // 현재 노선마다 end station을 저장해둠
+vector<running_info> course[1000]; // 현재 노선마다 end station을 저장해둠
 // 나중에 노선에 추가시 여기 값을 기준으로 새로운 edge를 추가한다음 cur_end_course update
+vector<next_station> station_course[200000]; // station 별로 가진 노선 정보
 
 station stations[200000];
 int tot_time[200000];
 
 // heap으로 fringe를 관리해봅시다. 한번
-int heap_arr[200000];
+next_station heap_arr[200000];
+int heap_idx[200000];
 
-void add(int d);
+void add(next_station d);
 int removeMin();
+void modify(int idx, int modified_time);
 
-bool compare_station(running_info a, running_info b) {
+bool compare_station(next_station a, next_station b) {
 	return a.stops_number < b.stops_number;
 }
 
@@ -47,32 +54,44 @@ int main() {
 
 	cin >> n >> q;
 	for (int i = 0; i < n; i++) {
-		running_info r, r_t;
-		cin >> r.stops_number >> r.course_number >> r.stops_name >> r.time;
-
-		r_t.stops_number = cur_end_course[r.course_number].number;
-		r_t.course_number = r.course_number;
-		r_t.stops_name = cur_end_course[r.course_number].name;
-		r_t.time = r.time;
-
-		station_course[cur_end_course[r.course_number].number].push_back(r); // 상행
-		station_course[r.stops_number].push_back(r_t); // 하행
-
-		end_station s; s.name = r.stops_name; s.number = r.stops_number;
-		cur_end_course[r.course_number] = s;
+		running_info r;
+		cin >> r.stops_number >> r.course >> r.stops_name >> r.time;
+		course[r.course].push_back(r);
+		stations[r.stops_number].name = r.stops_name;
+		max_course = r.course;
+		max_station = (r.stops_number > max_station ? r.stops_number : max_station);
 	}
 
-	for (int i = 0; i < n; i++) sort(station_course[i].begin(), station_course[i].end(), compare_station);
+	for (int i = 1; i <= max_course; i++) { // course에 대한 정보를 역에 대한 정보로 바꾸기
+		for (int j = 1; j < course[i].size(); j++) {
+			next_station up, down; // 상행, 하행
+			
+			up.stops_name = course[i][j].stops_name;
+			up.stops_number = course[i][j].stops_number;
+			up.time = course[i][j].time;
+
+			down.stops_name = course[i][j - 1].stops_name;
+			down.stops_number = course[i][j - 1].stops_number;
+			down.time = course[i][j].time;
+
+			station_course[course[i][j - 1].stops_number].push_back(up);
+			station_course[course[i][j].stops_number].push_back(down);
+		}
+	}
 
 	for (int i = 0; i < q; i++) {
-		char aORb, source, destination; 
+		char aORb;
+		int source, destination; 
 		cin >> aORb >> source >> destination;
 
-		for (int j = 0; j < n; j++) tot_time[j] = INFINITY; // 모든 질의에 대한 초기화 과정
+		for (int j = 0; j < n; j++) {
+			tot_time[j] = 0;
+			stations[j].status = 'U';
+			stations[j].prev_stat_idx = -1;
+		} // 모든 질의에 대한 초기화 과정
 
-		int minTime = INFINITY;
-
-		add(source); // time이 작은 순으로 minHeap을 유지
+		next_station s; s.stops_number = source; s.stops_name = stations[source].name; s.time = 0;
+		add(s); // time이 작은 순으로 minHeap을 유지
 		while (heap_size > 0) {
 
 			// removeMin한 다음
@@ -80,21 +99,35 @@ int main() {
 
 			// 그걸로 fringe 추가해주고 뺀 것은 tree로, distance, tot_time기록을 해야지
 			for (int i = 0; i < station_course[cur_tree].size(); i++) {
+
 				if (stations[station_course[cur_tree][i].stops_number].status == 'U') {
-					add(station_course[cur_tree][i].stops_number);
 					tot_time[station_course[cur_tree][i].stops_number] = tot_time[cur_tree] + station_course[cur_tree][i].time;
+					stations[station_course[cur_tree][i].stops_number].prev_stat_idx = cur_tree;
+					if (station_course[cur_tree][i].stops_number != destination) add(station_course[cur_tree][i]);
+					else stations[station_course[cur_tree][i].stops_number].status = 'F';
 				}
 				else if (stations[station_course[cur_tree][i].stops_number].status == 'F') {
-					if (tot_time[cur_tree] + station_course[cur_tree][i].time < tot_time[station_course[cur_tree][i].stops_number]) { // 만약 추가된 edge로 인해 distance가 update해야 될 경우, wmr tot_time + 추가된 edge vs 기존의 edge
+					// 만약 추가된 edge로 인해 distance가 update해야 될 경우, 즉 tot_time + 추가된 edge vs 기존의 edge
+					if (tot_time[cur_tree] + station_course[cur_tree][i].time < tot_time[station_course[cur_tree][i].stops_number]) {
 						tot_time[station_course[cur_tree][i].stops_number] = tot_time[cur_tree] + station_course[cur_tree][i].time;
 						stations[station_course[cur_tree][i].stops_number].prev_stat_idx = cur_tree;
+						// heap에서도 바꿔야 함
+						modify(station_course[cur_tree][i].stops_number, station_course[cur_tree][i].time);
+					}
+					else if (tot_time[cur_tree] + station_course[cur_tree][i].time == tot_time[station_course[cur_tree][i].stops_number]
+						&& cur_tree < stations[station_course[cur_tree][i].stops_number].prev_stat_idx) {
+						tot_time[station_course[cur_tree][i].stops_number] = tot_time[cur_tree] + station_course[cur_tree][i].time;
+						stations[station_course[cur_tree][i].stops_number].prev_stat_idx = cur_tree;
+						// heap에서도 바꿔야 함
+						modify(station_course[cur_tree][i].stops_number, station_course[cur_tree][i].time);
 					}
 				}
 			}
 		}
 
 		if (aORb == 'A') {
-			cout << tot_time[destination] << "\n";
+			if (tot_time[destination] == 0) cout << "None\n";
+			else cout << tot_time[destination] << "\n";
 		}
 		else {
 			int cur = destination;
@@ -104,9 +137,13 @@ int main() {
 				cur = stations[cur].prev_stat_idx;
 			}
 
+			if (s.top() != source) {
+				cout << "None\n";
+			}
+
 			cout << s.size() << " ";
 			while (!s.empty()) {
-				cout << s.top() << " ";
+				cout << stations[s.top()].name << " ";
 				s.pop();
 			}
 			cout << "\n";
@@ -115,26 +152,33 @@ int main() {
 	return 0;
 }
 
-void add(int d) {
+void add(next_station d) {
 	heap_size++;
 	heap_arr[heap_size] = d;
 
 	int cur = heap_size;
 	int parent = heap_size / 2;
 	while (parent) {
-		if (heap_arr[parent] > heap_arr[cur]) {
-			int tmp = heap_arr[parent];
+		if (heap_arr[parent].time > heap_arr[cur].time) {
+			next_station tmp = heap_arr[parent];
+			heap_arr[parent] = heap_arr[cur];
+			heap_arr[cur] = tmp;
+		}
+		else if (heap_arr[parent].time == heap_arr[cur].time && heap_arr[parent].stops_number > heap_arr[cur].stops_number) {
+			next_station tmp = heap_arr[parent];
 			heap_arr[parent] = heap_arr[cur];
 			heap_arr[cur] = tmp;
 		}
 		else break;
+		cur = parent;
+		parent = cur / 2;
 	}
-	stations[heap_arr[cur]].status = 'F';
+	stations[d.stops_number].status = 'F';
 	return;
 }
 
 int removeMin() {
-	int res = heap_arr[1];
+	int res = heap_arr[1].stops_number;
 	heap_arr[1] = heap_arr[heap_size];
 	heap_size--;
 
@@ -142,19 +186,34 @@ int removeMin() {
 	int child = 2;
 
 	while (child <= heap_size) {
-		if (child + 1 <= heap_size && heap_arr[child] < heap_arr[child + 1]) child++;
+		if (child + 1 <= heap_size && heap_arr[child].time < heap_arr[child + 1].time) child++;
 
-		if (heap_arr[cur] > heap_arr[child]) {
-			int tmp = heap_arr[cur];
+		if (heap_arr[cur].time > heap_arr[child].time) {
+			next_station tmp = heap_arr[cur];
 			heap_arr[cur] = heap_arr[child];
 			heap_arr[child] = tmp;
-
-			cur = child;
-			child = cur * 2;
+		}
+		else if (heap_arr[cur].time == heap_arr[child].time && heap_arr[cur].stops_number > heap_arr[child].stops_number) {
+			next_station tmp = heap_arr[cur];
+			heap_arr[cur] = heap_arr[child];
+			heap_arr[child] = tmp;
 		}
 		else break;
+
+		cur = child;
+		child = cur * 2;
 	}
-	stations[heap_arr[cur]].status = 'T';
+
+	stations[heap_arr[cur].stops_number].status = 'T';
 
 	return res;
+}
+
+void modify(int idx, int modified_time) {
+	for (int i = 1; i <= heap_size; i++) {
+		if (heap_arr[i].stops_number == idx) {
+			heap_arr[i].time = modified_time;
+			break;
+		}
+	}
 }
