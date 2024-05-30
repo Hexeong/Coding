@@ -5,9 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\AlgorithmSubjects2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|solutionrelative:AlgorithmSubjects2\\AlgorithmSubjects2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "vector",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "ViewState": "AQIAAP4CAAAAAAAAAAAWwAoDAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-29T06:46:46.263Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,7 +24,7 @@
               "RelativeDocumentMoniker": "AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
               "ToolTip": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
               "RelativeToolTip": "AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKQAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-26T13:09:35.015Z",
               "EditorCaption": ""

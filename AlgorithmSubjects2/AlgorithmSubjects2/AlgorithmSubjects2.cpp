@@ -11,15 +11,18 @@ struct running_info {
 	int course;
 	int time;
 };
+
 struct next_station {
 	string stops_name;
 	int stops_number;
 	int time;
 };
+
 struct end_station {
 	string name;
-	int number;
+	int number = 0;
 };
+
 struct station {
 	string name;
 	char status;
@@ -28,8 +31,7 @@ struct station {
 
 int n, q, max_course, max_station, heap_size;
 
-vector<running_info> course[1000]; // 현재 노선마다 end station을 저장해둠
-// 나중에 노선에 추가시 여기 값을 기준으로 새로운 edge를 추가한다음 cur_end_course update
+end_station end_station_by_course[1000];
 vector<next_station> station_course[200000]; // station 별로 가진 노선 정보
 
 station stations[200000];
@@ -56,26 +58,27 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		running_info r;
 		cin >> r.stops_number >> r.course >> r.stops_name >> r.time;
-		course[r.course].push_back(r);
 		stations[r.stops_number].name = r.stops_name;
-		max_course = r.course;
-		max_station = (r.stops_number > max_station ? r.stops_number : max_station);
-	}
-
-	for (int i = 1; i <= max_course; i++) { // course에 대한 정보를 역에 대한 정보로 바꾸기
-		for (int j = 1; j < course[i].size(); j++) {
+		if (r.time == 0) {
+			end_station_by_course[r.course].name = r.stops_name;
+			end_station_by_course[r.course].number = r.stops_number;
+		}
+		else {
 			next_station up, down; // 상행, 하행
-			
-			up.stops_name = course[i][j].stops_name;
-			up.stops_number = course[i][j].stops_number;
-			up.time = course[i][j].time;
 
-			down.stops_name = course[i][j - 1].stops_name;
-			down.stops_number = course[i][j - 1].stops_number;
-			down.time = course[i][j].time;
+			up.stops_name = r.stops_name;
+			up.stops_number = r.stops_number;
+			up.time = r.time;
 
-			station_course[course[i][j - 1].stops_number].push_back(up);
-			station_course[course[i][j].stops_number].push_back(down);
+			down.stops_name = end_station_by_course[r.course].name;
+			down.stops_number = end_station_by_course[r.course].number;
+			down.time = r.time;
+
+			station_course[end_station_by_course[r.course].number].push_back(up);
+			station_course[r.stops_number].push_back(down);
+
+			end_station_by_course[r.course].name = r.stops_name;
+			end_station_by_course[r.course].number = r.stops_number;
 		}
 	}
 
