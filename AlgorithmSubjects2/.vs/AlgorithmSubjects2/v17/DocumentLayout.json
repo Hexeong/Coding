@@ -3,30 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\AlgorithmSubjects2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|solutionrelative:AlgorithmSubjects2\\AlgorithmSubjects2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\reSubjects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6E2D8921-C79C-46F7-AD94-70E052A157EB}|AlgorithmSubjects2\\AlgorithmSubjects2.vcxproj|solutionrelative:AlgorithmSubjects2\\reSubjects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
+          "DockedWidth": 200,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AlgorithmSubjects2.cpp",
-              "DocumentMoniker": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
-              "RelativeDocumentMoniker": "AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
-              "ToolTip": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
-              "RelativeToolTip": "AlgorithmSubjects2\\AlgorithmSubjects2.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Title": "reSubjects.cpp",
+              "DocumentMoniker": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\reSubjects.cpp",
+              "RelativeDocumentMoniker": "AlgorithmSubjects2\\reSubjects.cpp",
+              "ToolTip": "C:\\Users\\123ma\\Desktop\\Coding\\AlgorithmSubjects2\\AlgorithmSubjects2\\reSubjects.cpp",
+              "RelativeToolTip": "AlgorithmSubjects2\\reSubjects.cpp",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAHMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T13:09:35.015Z",
+              "WhenOpened": "2024-05-31T03:39:57.399Z",
               "EditorCaption": ""
             }
           ]
