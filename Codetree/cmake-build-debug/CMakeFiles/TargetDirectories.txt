@@ -1,0 +1,3 @@
+C:/Users/admin/Desktop/Coding/Codetree/cmake-build-debug/CMakeFiles/Codetree.dir
+C:/Users/admin/Desktop/Coding/Codetree/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/admin/Desktop/Coding/Codetree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
