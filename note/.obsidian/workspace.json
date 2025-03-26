@@ -183,18 +183,19 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b8d9edec4c4aa4cc",
+  "active": "af44729e4055d4ee",
   "lastOpenFiles": [
-    "DP/최단 경로 문제.md",
-    "DP/점화식 기반 문제.md",
-    "DP/영역합.md",
-    "DP/부분 수열 및 부분 배열 문제.md",
-    "DP/배낭 문제 유형.md",
+    "문제 유형 정리",
+    "문제 유형 정리/DP/최단 경로 문제.md",
+    "문제 유형 정리/DP/점화식 기반 문제.md",
+    "문제 유형 정리/DP/영역합.md",
+    "문제 유형 정리/DP/부분 수열 및 부분 배열 문제.md",
+    "문제 유형 정리/DP/배낭 문제 유형.md",
     "빅오, 자료형/Data Structure.md",
-    "DP/기타.md",
-    "Bit Masking.md",
+    "문제 유형 정리/DP/기타.md",
+    "문제 유형 정리/Bit Masking.md",
     "DP.md",
-    "DP",
+    "문제 유형 정리/DP",
     "빅오, 자료형/Big-Oh.md",
     "빅오, 자료형"
   ]
