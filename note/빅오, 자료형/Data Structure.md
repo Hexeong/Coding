@@ -49,11 +49,25 @@ int main() {
 
 ## Priority Queue
 
-1. C++ - 
+1. **C++ - priority_queue**
+	- `priority_queue`는 내부적으로 **힙(Heap)** 자료구조를 사용한다. 일반적으로 **최대 힙(Max-Heap)** 을 사용하여 가장 큰 원소가 큐의 맨 앞에 오도록 한다. **최소 힙(Min-Heap)** 을 사용하려면 `greater` 비교자를 설정할 수 있다.
+		- **최대 힙(Max-Heap)**: 기본적으로 `priority_queue`는 최대 힙으로 동작한다.
+		- **최소 힙(Min-Heap)**: `priority_queue`는 `greater`를 이용하여 최소 힙으로 만들 수 있다.
+```c++
+priority_queue<T, Container, Compare>
+
+// 예시
+priority_queue<int, vector<int>, greater<int>> pq; // 최소 힙
+```
+
+- `T`: 저장할 원소의 타입
+- `Container`: 내부적으로 사용될 컨테이너 타입 (기본값: `vector<T>`)
+- `Compare`: 원소를 비교하는 함수 객체 (기본값: `less<T>`로, 최대 힙으로 동작)
+
 
 ## Graph
 
-1. C++ - 인접리스트, 희소  그래프일 때 사용
+1. **C++ - 인접리스트, 희소  그래프일 때 사용**
 ```c++
 const int N = 1000; // 최대 정점 수
 vector<int> adj[N]; // 인접 리스트
@@ -67,7 +81,7 @@ void addEdge(int u, int v) {
 // **메모리**: `O(V + E)` (V는 정점의 개수, E는 간선의 개수).
 ```
 
-2. C++ - 인접 행렬, dense 그래프일 때 사용
+2. **C++ - 인접 행렬, dense 그래프일 때 사용**
 ```c++
 const int N = 1000; // 최대 정점 수
 int adjMatrix[N][N]; // 인접 행렬
