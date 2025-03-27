@@ -11,10 +11,14 @@
             "id": "8fe50a6339dd10d9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "알고리즘/Kruskal.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "Kruskal"
             }
           }
         ]
@@ -166,7 +170,13 @@
   },
   "active": "8fe50a6339dd10d9",
   "lastOpenFiles": [
+    "알고리즘/Dijkstra.md",
+    "알고리즘/Prim.md",
+    "알고리즘/Kruskal.md",
     "빅오, 자료형/Data Structure.md",
+    "알고리즘",
+    "문제 유형 정리/문제 해결 전략 및 시각.md",
+    "문제 유형 정리/Bit Masking",
     "문제 유형 정리",
     "문제 유형 정리/DP/최단 경로 문제.md",
     "문제 유형 정리/DP/점화식 기반 문제.md",
@@ -174,7 +184,7 @@
     "문제 유형 정리/DP/부분 수열 및 부분 배열 문제.md",
     "문제 유형 정리/DP/배낭 문제 유형.md",
     "문제 유형 정리/DP/기타.md",
-    "문제 유형 정리/Bit Masking.md",
+    "문제 유형 정리/Bit Masking/Bit Masking.md",
     "DP.md",
     "문제 유형 정리/DP",
     "빅오, 자료형/Big-Oh.md",
