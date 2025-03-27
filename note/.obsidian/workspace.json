@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "17fec27822e733c5",
@@ -170,9 +171,9 @@
   },
   "active": "8fe50a6339dd10d9",
   "lastOpenFiles": [
+    "알고리즘/Kruskal.md",
     "알고리즘/Dijkstra.md",
     "알고리즘/Prim.md",
-    "알고리즘/Kruskal.md",
     "빅오, 자료형/Data Structure.md",
     "알고리즘",
     "문제 유형 정리/문제 해결 전략 및 시각.md",
