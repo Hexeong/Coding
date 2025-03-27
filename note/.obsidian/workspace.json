@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "476edd48e7d55f11",
+        "id": "4ad63c12395a55cb",
         "type": "tabs",
         "children": [
           {
-            "id": "b72f6d3091b1b16a",
+            "id": "8fe50a6339dd10d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "빅오, 자료형/Data Structure.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Data Structure"
-            }
-          },
-          {
-            "id": "b8d9edec4c4aa4cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "빅오, 자료형/Data Structure.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Structure"
+              "title": "새 탭"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,15 +164,15 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "af44729e4055d4ee",
+  "active": "8fe50a6339dd10d9",
   "lastOpenFiles": [
+    "빅오, 자료형/Data Structure.md",
     "문제 유형 정리",
     "문제 유형 정리/DP/최단 경로 문제.md",
     "문제 유형 정리/DP/점화식 기반 문제.md",
     "문제 유형 정리/DP/영역합.md",
     "문제 유형 정리/DP/부분 수열 및 부분 배열 문제.md",
     "문제 유형 정리/DP/배낭 문제 유형.md",
-    "빅오, 자료형/Data Structure.md",
     "문제 유형 정리/DP/기타.md",
     "문제 유형 정리/Bit Masking.md",
     "DP.md",
