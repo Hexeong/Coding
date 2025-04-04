@@ -1,9 +1,9 @@
 # ninja log v6
-4	413	7647912886310651	CMakeFiles/Baekjoon.dir/13460.cpp.obj	47e164feb2050303
 13	404	7648719834559546	CMakeFiles/Baekjoon.dir/3190_Samsung.cpp.obj	2f2330b9750827f2
+4	413	7647912886310651	CMakeFiles/Baekjoon.dir/13460.cpp.obj	47e164feb2050303
+360	447	7654760103635341	Baekjoon.exe	74fe571938aadf15
 4	283	7648498991191997	CMakeFiles/Baekjoon.dir/12100_Samsung.cpp.obj	9df1622753eaed42
-352	445	7654690978442996	Baekjoon.exe	ea88d4ab92aea28d
-13	267	7654745503971384	build.ninja	fb7ca21f47539a75
+2	289	7654794667600722	build.ninja	fb7ca21f47539a75
 18	677	7648454133739275	CMakeFiles/Baekjoon.dir/13460_Samsung.cpp.obj	273e5bd5cd59d57c
 24	445	7652128382199052	CMakeFiles/Baekjoon.dir/14500_Samsung.cpp.obj	7da0c781edf69047
 15	359	7652152152555886	CMakeFiles/Baekjoon.dir/14501_Samsung.cpp.obj	2dc198b0a38c3306
@@ -11,18 +11,9 @@
 15	330	7653712339829039	CMakeFiles/Baekjoon.dir/14503_Samsung.cpp.obj	9f7e23bd7cfc9ecc
 4	316	7653819054470950	CMakeFiles/Baekjoon.dir/14888_Samsung.cpp.obj	4aeee9d50a5a0a00
 4	352	7654690974967604	CMakeFiles/Baekjoon.dir/14890_Samsung.cpp.obj	420ffdd2a80360cb
-2	289	7654745503971384	build.ninja	fb7ca21f47539a75
-23	377	7654745504765355	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-377	467	7654745508311586	Baekjoon.exe	74fe571938aadf15
-3	360	7654748407857999	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-360	454	7654748411421542	Baekjoon.exe	74fe571938aadf15
-4	371	7654751145996515	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-371	460	7654751149667587	Baekjoon.exe	74fe571938aadf15
-4	359	7654753554328489	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-359	450	7654753557876587	Baekjoon.exe	74fe571938aadf15
-3	351	7654754596143842	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-352	445	7654754599619536	Baekjoon.exe	74fe571938aadf15
-4	359	7654759136170779	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-359	450	7654759139717035	Baekjoon.exe	74fe571938aadf15
 4	359	7654760100078017	CMakeFiles/Baekjoon.dir/14891_Samsung.cpp.obj	1a4c273bc920bfb5
-360	447	7654760103635341	Baekjoon.exe	74fe571938aadf15
+4	307	7654794600722942	CMakeFiles/Baekjoon.dir/15683_Samsung.cpp.obj	efd778aeacb3cd9e
+2	281	7654794667600722	build.ninja	fb7ca21f47539a75
+19	110	7654794668413027	Baekjoon.exe	12fdf57f766be629
+3	322	7654796940000279	CMakeFiles/Baekjoon.dir/15683_Samsung.cpp.obj	efd778aeacb3cd9e
+322	421	7654796943185609	Baekjoon.exe	12fdf57f766be629
