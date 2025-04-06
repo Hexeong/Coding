@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool map[100][100];
+bool map[101][101];
 vector<vector<vector<pair<int, int>>>> dragon(
     4,
     vector<vector<pair<int, int>>>(
@@ -26,23 +26,25 @@ void calculate_dragon_curve() {
     for (int i = 0; i < 4; i++) { // 차례대로 동, 북, 서, 남
         // 0세대에 대한 초기값
         dragon[i][0].push_back(make_pair(0, 0));
-        dragon[i][1].push_back(make_pair(dx[i], dy[i]));
+        dragon[i][0].push_back(make_pair(dx[i], dy[i]));
         // 1세대부터 10세대까지 dp
         for (int j = 1; j < 11; j++) { // 각 방향에 대해서 10세대까지 계산
             pair<int, int> last_point = dragon[i][j - 1].back();
             dragon[i][j] = dragon[i][j - 1]; // 이전에 계산한 값 복사
-            for (int k = dragon[i][j].size() - 1; k > -1; k--) { // 끝점을 제외하고 반복, 역순으로 돌려서 push
+            for (int k = dragon[i][j].size() - 2; k > -1; k--) { // 끝점을 제외하고 반복, 역순으로 돌려서 push
                 // 끝점을 제외한 드래곤 커브 지점들을 원점 기준으로 이동
                 int diff_x = dragon[i][j][k].first - last_point.first;
                 int diff_y = dragon[i][j][k].second - last_point.second;
 
                 // 시계 방향 90도 회전 및 다시 기준점 기준으로 이동
                 dragon[i][j].push_back(make_pair(
-                    last_point.first + diff_y, last_point.second - diff_x));
+                    last_point.first - diff_y, last_point.second + diff_x));
             }
         }
     }
 }
+
+// 00 -1 -2, 2,-1
 
 int main() {
     ios::sync_with_stdio(false);
@@ -60,12 +62,20 @@ int main() {
         cin >> x >> y >> d >> g; // d는 0, 1, 2, 3으로 차례대로 동, 북, 서, 남
 
         for (int j = 0; j < dragon[d][g].size(); j++) {
-            map[y][x] = true;
+            map[y + dragon[d][g][j].second][x + dragon[d][g][j].first] = true;
         }
     }
 
-    //
+    // 전체 map에 대해서 1 X 1 정사각형 찾기
+    int cnt = 0;
+    for (int i = 0; i < 100; i++) { // 0 <= x, y <= 100 이므로
+        for (int j = 0; j < 100; j++) {
+            if (map[i][j] && map[i + 1][j] && map[i][j + 1] && map[i + 1][j + 1])
+                cnt++;
+        }
+    }
 
+    cout << cnt << "\n";
 
     return 0;
 }
