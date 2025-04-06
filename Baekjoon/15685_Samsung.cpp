@@ -32,9 +32,11 @@ void calculate_dragon_curve() {
             pair<int, int> last_point = dragon[i][j - 1].back();
             dragon[i][j] = dragon[i][j - 1]; // 이전에 계산한 값 복사
             for (int k = dragon[i][j].size() - 1; k > -1; k--) { // 끝점을 제외하고 반복, 역순으로 돌려서 push
+                // 끝점을 제외한 드래곤 커브 지점들을 원점 기준으로 이동
                 int diff_x = dragon[i][j][k].first - last_point.first;
                 int diff_y = dragon[i][j][k].second - last_point.second;
 
+                // 시계 방향 90도 회전 및 다시 기준점 기준으로 이동
                 dragon[i][j].push_back(make_pair(
                     last_point.first + diff_y, last_point.second - diff_x));
             }
@@ -62,7 +64,7 @@ int main() {
         }
     }
 
-    // 
+    //
 
 
     return 0;
