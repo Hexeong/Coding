@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "알고리즘/Kruskal.md",
+                "file": "알고리즘/Dijkstra.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kruskal"
+              "title": "Dijkstra"
             }
           }
         ]
