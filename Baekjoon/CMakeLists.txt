@@ -4,4 +4,4 @@ project(Baekjoon)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Baekjoon
-        1753_Dijkstra.cpp)
+        16234_Samsung.cpp)
