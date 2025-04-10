@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Users/admin/Desktop/Coding/Baekjoon/cmake-build-debug/
 
 build cmake_object_order_depends_target_Baekjoon: phony || .
 
-build CMakeFiles/Baekjoon.dir/17144_Samsung.cpp.obj: CXX_COMPILER__Baekjoon_unscanned_Debug C$:/Users/admin/Desktop/Coding/Baekjoon/17144_Samsung.cpp || cmake_object_order_depends_target_Baekjoon
-  DEP_FILE = CMakeFiles\Baekjoon.dir\17144_Samsung.cpp.obj.d
+build CMakeFiles/Baekjoon.dir/17143_Samsung.cpp.obj: CXX_COMPILER__Baekjoon_unscanned_Debug C$:/Users/admin/Desktop/Coding/Baekjoon/17143_Samsung.cpp || cmake_object_order_depends_target_Baekjoon
+  DEP_FILE = CMakeFiles\Baekjoon.dir\17143_Samsung.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Baekjoon.dir
   OBJECT_FILE_DIR = CMakeFiles\Baekjoon.dir
@@ -63,7 +63,7 @@ build CMakeFiles/Baekjoon.dir/17144_Samsung.cpp.obj: CXX_COMPILER__Baekjoon_unsc
 #############################################
 # Link the executable Baekjoon.exe
 
-build Baekjoon.exe: CXX_EXECUTABLE_LINKER__Baekjoon_Debug CMakeFiles/Baekjoon.dir/17144_Samsung.cpp.obj
+build Baekjoon.exe: CXX_EXECUTABLE_LINKER__Baekjoon_Debug CMakeFiles/Baekjoon.dir/17143_Samsung.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Baekjoon.dir
