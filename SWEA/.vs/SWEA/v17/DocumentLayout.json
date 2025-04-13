@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Coding\\SWEA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00891BDB-37FD-471F-84EF-51B72051F0A6}|SWEA.vcxproj|C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5658.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{00891BDB-37FD-471F-84EF-51B72051F0A6}|SWEA.vcxproj|solutionrelative:5658.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00891BDB-37FD-471F-84EF-51B72051F0A6}|SWEA.vcxproj|C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5656.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{00891BDB-37FD-471F-84EF-51B72051F0A6}|SWEA.vcxproj|solutionrelative:5656.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00891BDB-37FD-471F-84EF-51B72051F0A6}|SWEA.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
+              "ViewState": "AQIAAE8HAAAAAAAAAAAvwGQHAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-12T05:40:14.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "5656.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5656.cpp",
+              "RelativeDocumentMoniker": "5656.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5656.cpp",
+              "RelativeToolTip": "5656.cpp",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwE8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T04:43:30.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "5658.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5658.cpp",
+              "RelativeDocumentMoniker": "5658.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Coding\\SWEA\\5658.cpp",
+              "RelativeToolTip": "5658.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T00:13:11.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "알고리즘/Dijkstra.md",
+                "file": "문제 유형 정리/Bit Masking/Bit Masking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dijkstra"
+              "title": "Bit Masking"
             }
           }
         ]
@@ -171,8 +171,28 @@
   },
   "active": "8fe50a6339dd10d9",
   "lastOpenFiles": [
-    "알고리즘/Kruskal.md",
+    "Samsung SW 역량 테스트 준비/A형 (구현, 행렬회전, DFS, BFS 등)/블로그 후기.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Sqrt Decomposition.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Segment Tree.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/LCA(Lowest Common Ancestor).md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Trie.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Queue, Stack.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Heap.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/Sort.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/분할 정복.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/이분탐색.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/비트 마스킹.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/메모이제이션.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/트리 구현.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/링크드 리스트.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/해싱.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)/링ㅋ",
+    "문제 유형 정리/Bit Masking/Bit Masking.md",
+    "Samsung SW 역량 테스트 준비/B형 (자료구조, 최적화 등)",
+    "Samsung SW 역량 테스트 준비/A형 (구현, 행렬회전, DFS, BFS 등)",
+    "Samsung SW 역량 테스트 준비",
     "알고리즘/Dijkstra.md",
+    "알고리즘/Kruskal.md",
     "알고리즘/Prim.md",
     "빅오, 자료형/Data Structure.md",
     "알고리즘",
@@ -184,11 +204,7 @@
     "문제 유형 정리/DP/영역합.md",
     "문제 유형 정리/DP/부분 수열 및 부분 배열 문제.md",
     "문제 유형 정리/DP/배낭 문제 유형.md",
-    "문제 유형 정리/DP/기타.md",
-    "문제 유형 정리/Bit Masking/Bit Masking.md",
-    "DP.md",
     "문제 유형 정리/DP",
-    "빅오, 자료형/Big-Oh.md",
     "빅오, 자료형"
   ]
 }
