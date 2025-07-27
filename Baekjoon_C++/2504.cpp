@@ -1,4 +1,4 @@
-#include <iostream> 
+#include <iostream>
 #include <stack>
 #include <algorithm>
 #include <vector>
@@ -67,7 +67,7 @@ int main() {
 //using namespace std;
 //
 //stack<pair<char, int>> s;
-//int floors[16][16]; // i = start floor, j = end floor·Î ÇØ¼­ *2ÀÇ °æ¿ì end floor°¡ +1ÀÎ °÷ ºÎÅÍ °öÇÏ±â
+//int floors[16][16]; // i = start floor, j = end floorï¿½ï¿½ ï¿½Ø¼ï¿½ *2ï¿½ï¿½ ï¿½ï¿½ï¿½ end floorï¿½ï¿½ +1ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 //
 //int main() {
 //	string t; cin >> t;
@@ -95,7 +95,7 @@ int main() {
 //					floors[s.top().second][s.top().second] += 2;
 //				}
 //				else if (s.top().second == last_floor - 1) {
-//					// ÀÌÀü °Í ½Ï´Ù °öÇÏ±â
+//					// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 //					for (int j = s.top().second + 1; j < 16; j++) {
 //						if (floors[i][j] != 0) {
 //							floors[i][s.top().second] = floors[i][j];
@@ -130,7 +130,7 @@ int main() {
 //					floors[s.top().second] += 3;
 //				}
 //				else if (s.top().second == last_floor - 1) {
-//					// ÀÌÀü °Í ½Ï´Ù °öÇÏ±â
+//					// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 //					for (int i = s.top().second + 1; i < 16; i++) {
 //						floors[i] *= 3;
 //					}
