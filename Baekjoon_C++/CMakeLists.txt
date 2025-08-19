@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Baekjoon
 #        16684.cpp
-        5430_3.cpp)
+#        5430_3.cpp
+        11003.cpp)
