@@ -1,9 +1,10 @@
 # ninja log v6
-1211	1371	7772995315707132	Baekjoon.exe	d4f59caff0667435
+337	406	7773038398842311	Baekjoon.exe	33d92b42312412c9
 17	358	7753173295207136	CMakeFiles/Baekjoon.dir/1460.cpp.obj	55528c52c2e77b7
 11	405	7754075412057758	CMakeFiles/Baekjoon.dir/2504_2.cpp.obj	7d7a6080c7212e13
 21	61	7753173295242226	CMakeFiles/Baekjoon.dir/5397_Second.cpp.obj	861bd600ab9ccc34
-7	339	7772996589421137	build.ninja	9322236c1b9e928f
+10	365	7773664599988777	build.ninja	9322236c1b9e928f
+4	376	7773006502052361	CMakeFiles/Baekjoon.dir/15655.cpp.obj	9ed5fb43a0ade9cc
 3	403	7767882614481343	CMakeFiles/Baekjoon.dir/2206.cpp.obj	6d2f2bbe33e05b35
 3	333	7754080197016216	CMakeFiles/Baekjoon.dir/2504_3.cpp.obj	7a57362a32af966d
 1	346	7753173663646483	CMakeFiles/Baekjoon.dir/10828.cpp.obj	ffb27588ed6d8b0
@@ -11,6 +12,7 @@
 3	386	7753222692586675	CMakeFiles/Baekjoon.dir/5430_2.cpp.obj	6e8ccfdf5ab1cb67
 3	356	7754096933349008	CMakeFiles/Baekjoon.dir/9012.cpp.obj	78805f6f44b30c6e
 3	385	7754815642610080	CMakeFiles/Baekjoon.dir/1874.cpp.obj	afe7bb2c0e84e99
+3	337	7773038395510938	CMakeFiles/Baekjoon.dir/11559_2.cpp.obj	d71654f0cfaab7dc
 11	411	7754832843326864	CMakeFiles/Baekjoon.dir/6198_2.cpp.obj	74957580057f05bf
 17	836	7755641890693296	CMakeFiles/Baekjoon.dir/17298_2.cpp.obj	42759424fd0975d
 3	379	7767654088184105	CMakeFiles/Baekjoon.dir/7569.cpp.obj	a3787ac813fad3c0
@@ -21,9 +23,16 @@
 3	427	7768580416485807	CMakeFiles/Baekjoon.dir/5427.cpp.obj	ce464f3549daed44
 11	428	7768891748545645	CMakeFiles/Baekjoon.dir/2146.cpp.obj	ef4530fb8f06f2a1
 3	309	7772996318291873	CMakeFiles/Baekjoon.dir/11003.cpp.obj	c30fdd8dc3f2bfd8
-7	339	7772996589391132	C:/Users/admin/Desktop/Coding/Baekjoon_C++/cmake-build-debug/cmake_install.cmake	9322236c1b9e928f
+10	365	7773664599938689	C:/Users/admin/Desktop/Coding/Baekjoon_C++/cmake-build-debug/cmake_install.cmake	9322236c1b9e928f
 18	387	7769493732642967	CMakeFiles/Baekjoon.dir/11729_2.cpp.obj	6476ca2491b3cb77
 4	265	7769499715190742	CMakeFiles/Baekjoon.dir/1074_2.cpp.obj	40e87d097658d5c1
 9	330	7769694378200123	CMakeFiles/Baekjoon.dir/16684.cpp.obj	4cc8cf9d069e1327
 9	414	7772865718101957	CMakeFiles/Baekjoon.dir/5430_3.cpp.obj	534c8ab1c29ecff1
-3	74	7772996958393770	Baekjoon.exe	d4f59caff0667435
+28	445	7774621223987769	CMakeFiles/Baekjoon.dir/1941.cpp.obj	7360d15e9695dc58
+446	629	7774621228169241	Baekjoon.exe	e61f808114e880e6
+3	337	7774629730053560	CMakeFiles/Baekjoon.dir/1941.cpp.obj	7360d15e9695dc58
+338	417	7774629733400443	Baekjoon.exe	e61f808114e880e6
+3	328	7774630975596929	CMakeFiles/Baekjoon.dir/1941.cpp.obj	7360d15e9695dc58
+328	398	7774630978834059	Baekjoon.exe	e61f808114e880e6
+4	335	7774642649432484	CMakeFiles/Baekjoon.dir/1941.cpp.obj	7360d15e9695dc58
+335	413	7774642652739977	Baekjoon.exe	e61f808114e880e6
