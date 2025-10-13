@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/hex/Desktop/공부/Coding/Baekjoon_C++ -B /Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug
--- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug

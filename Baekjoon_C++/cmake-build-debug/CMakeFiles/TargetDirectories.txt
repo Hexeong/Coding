@@ -1,3 +1,0 @@
-/Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug/CMakeFiles/Baekjoon.dir
-/Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
