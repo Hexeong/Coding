@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.3.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\admin\Desktop\Coding\Baekjoon_C++ -B C:\Users\admin\Desktop\Coding\Baekjoon_C++\cmake-build-debug
--- Configuring done (0.3s)
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/hex/Desktop/공부/Coding/Baekjoon_C++ -B /Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/Users/admin/Desktop/Coding/Baekjoon_C++/cmake-build-debug
+-- Build files have been written to: /Users/hex/Desktop/공부/Coding/Baekjoon_C++/cmake-build-debug
