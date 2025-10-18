@@ -4,5 +4,4 @@ project(Baekjoon_C++)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Baekjoon
-        psm_W01_A.cpp
         psm_W01_B.cpp)
