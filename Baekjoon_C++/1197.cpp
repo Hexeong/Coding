@@ -1,52 +1,62 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <queue>
 
 using namespace std;
 
-class Entry {
-public:
-	int x;
-	int y;
-	int z;
-	Entry(int a, int b, int c) {
-		x = a;
-		y = b;
-		z = c;
-	}
+struct edge {
+    int u;
+    int v;
+    int w;
 };
 
-int V, E, re;
-Entry e[100000];
-vector<pair<int, int>> v[10001];
+struct Compartor {
+    bool operator()(edge& a, edge& b) const {
+        return a.w > b.w;
+    }
+};
 
-bool compare(Entry a, Entry b) {
-	return a.z < b.z;
-}
+int find(vector<int>& root, int x) {
+    if (root[x] == x)
+        return x;
 
-void DFS(int start) {
-
+    return root[x] = find(root, root[x]);
 }
 
 int main() {
-	cin >> V >> E;
-	int a, b, c;
-	for (int i = 0; i < E; i++) {
-		cin >> a >> b >> c;
-		/*v[a].push_back(make_pair(b, c));
-		v[b].push_back(make_pair(a, c));*/
-		e[i] = Entry(a, b, c);
-	}
-	
-	sort(e, e + E, compare);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-	for (int i = 0; i < E; i++) {
+    int V, E; cin >> V >> E;
+    priority_queue<edge, vector<edge>, Compartor> pq;
 
-	}
+    for (int i = 0; i < E; i++) {
+        int u, v, w; cin >> u >> v >> w;
+        pq.push({u, v, w});
+    }
 
+    int cnt = 0;
+    int result = 0;
+    vector<int> root(V + 1);
+    for (int i = 1; i <= V; i++)
+        root[i] = i;
+
+    while (!pq.empty()) {
+        if (cnt == V - 1)
+            break;
+
+        edge e = pq.top();
+        pq.pop();
+
+        int u_root = find(root, e.u);
+        int v_root = find(root, e.v);
+
+        if (u_root != v_root) {
+            root[u_root] = v_root;
+            result += e.w;
+            cnt++;
+        }
+    }
+
+    cout << result << '\n';
 }
-
-// 간선을 모두 받고, 그 다음 정렬
-// 이 후, 가중치가 낮은 순대로 뽑기
-// 뽑을 때, cycle이 없도록, 같은 목적지의 간선이 없도록
-//
