@@ -35,12 +35,6 @@ public class Main {
         
         // 2단계: 재귀 대신 DP를 사용하여 각 칸에서 정확히 T번 이동할 때의 최대 점수 미리 계산
         int[][] base = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                base[i][j] = 0; // 0번 이동 시 추가 점수는 0
-            }
-        }
-        
         // step을 1부터 t까지 늘려가며 바텀업으로 T번 이동 시의 점수(maxForward)를 계산
         for (int step = 1; step <= t; step++) {
             int[][] nextF = new int[n][n];
